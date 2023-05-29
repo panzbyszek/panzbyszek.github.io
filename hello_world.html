@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hello World in Web3</title>
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+</head>
+<body>
+  <h1 id="hello">Loading...</h1>
+
+  <script>
+    window.addEventListener('load', async () => {
+      // Checking if Web3 has been injected by the browser (Mist/MetaMask)
+      if (typeof web3 !== 'undefined') {
+        // Use Mist/MetaMask's provider
+        window.web3 = new Web3(web3.currentProvider);
+      } else {
+        console.log('No web3? You should consider trying MetaMask!')
+        // fallback - use your fallback strategy (local node / hosted node + in-dapp id mgmt / fail)
+        window.web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+      }
+
+      // Now you can start your app & access web3 freely:
+      startApp()
+    })
+
+    function startApp() {
+      document.getElementById('hello').innerText = 'Hello, World!';
+    }
+  </script>
+</body>
+</html>
