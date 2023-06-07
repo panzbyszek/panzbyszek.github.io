@@ -405,7 +405,7 @@ hr {
 /*────────────────── 
  CSS dla listy rozwijanej 
 ──────────────────*/
-
+/*
 .dropdown {
     position: relative;
     display: inline-block;
@@ -426,5 +426,5 @@ hr {
     text-decoration: none;
     display: block;
 }
-
+*/
 .dropdown:hover .dropdown
