@@ -78,7 +78,7 @@ a.nav-link{
 }
 
 a.nav-link-child{
-	font-size: 80%;
+	font-size: 85%;
 	margin: 2px;
 	padding: 5px 10px;
 	text-decoration: none;
@@ -276,15 +276,19 @@ footer {
 }
 
 .copyright {
-	color: #fff;
-	font-size: 1.2rem;
+	color: var(--main-fonts-color);
+	font-family: var(--main-font-family);
+	/*color: #fff;
+	font-size: 1.2rem;*/
 	line-height: 40px;
 	text-align: center;
 }
 
 .copyright a{
-	color: #fff;
-	font-size: 1rem;
+	color: var(--main-fonts-color);
+	font-family: var(--main-font-family);
+	/*color: #fff;
+	font-size: 1rem;*/
 	letter-spacing: 1px;
     	text-decoration: none;
 }
