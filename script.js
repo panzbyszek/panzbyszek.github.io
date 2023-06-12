@@ -34,7 +34,7 @@ const navSlide = () => {
 
 window.onload = () => navSlide();
 
-//JS do przewijania projektow
+/*//JS do przewijania projektow
 const container = document.querySelector('.card-container');
 const leftArrow = document.querySelector('.arrow-left');
 const rightArrow = document.querySelector('.arrow-right');
@@ -46,3 +46,4 @@ leftArrow.addEventListener('click', () => {
 rightArrow.addEventListener('click', () => {
   container.scrollLeft += container.offsetWidth;
 });
+*/
