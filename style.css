@@ -431,3 +431,34 @@ hr {
 
 .dropdown:hover .dropdown
 */
+
+
+/*────────────────── 
+ CSS dla przewijania projektow
+──────────────────*/
+
+.container {
+  display: flex;
+  overflow: hidden;
+}
+
+.arrow-left, .arrow-right {
+  cursor: pointer;
+}
+
+.card-container {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.card {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  width: calc(100% / 3);
+  /* reszta styli dla kart */
+}
+
+
+
