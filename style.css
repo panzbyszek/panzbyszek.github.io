@@ -60,7 +60,7 @@ header:hover {
 }
 
 a.nav-link {
-	margin: 2px;
+	margin: 50px;
 	padding: 5px 10px;
 	text-decoration: none;
 	color: var(--main-fonts-color);
@@ -79,6 +79,7 @@ a.nav-link {
 }
 
 a.nav-link-child {
+	text-align: center;
 	font-size: 85%;
 	margin: 2px;
 	padding: 5px 10px;
@@ -86,7 +87,7 @@ a.nav-link-child {
 	color: var(--main-fonts-color);
 	font-family: var(--main-font-family);
 	cursor: pointer;
-	text-transform: uppercase;
+/*	text-transform: uppercase; */
 }
 
 .nav-link-child:hover {
@@ -387,7 +388,6 @@ hr {
 
 
 @media only screen and (max-width: 500px) {
-
 	#home,
 	#projects,
 	#contact {
@@ -427,7 +427,7 @@ hr {
 	.hamburger {
 		position: absolute;
 		top: 17px;
-		right: 25%;
+		right: 10%;
 		display: block;
 		cursor: pointer;
 		z-index: 5;
