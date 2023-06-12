@@ -453,12 +453,12 @@ hr {
   -webkit-overflow-scrolling: touch;
 }
 
-.card {
+/*.card {
   scroll-snap-align: start;
   flex-shrink: 0;
   width: calc(100% / 3);
   /* reszta styli dla kart */
-}
+}*/
 
 
 
