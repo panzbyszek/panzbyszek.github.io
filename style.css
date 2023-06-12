@@ -60,7 +60,7 @@ header:hover {
 }
 
 a.nav-link {
-	margin: 50px;
+	margin: 2px;
 	padding: 5px 10px;
 	text-decoration: none;
 	color: var(--main-fonts-color);
@@ -79,7 +79,6 @@ a.nav-link {
 }
 
 a.nav-link-child {
-	text-align: center;
 	font-size: 85%;
 	margin: 2px;
 	padding: 5px 10px;
