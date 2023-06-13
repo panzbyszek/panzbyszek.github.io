@@ -48,8 +48,8 @@ header:hover {
 }
 
 .logo img {
-	padding-top: 5px;
-	height: 50px;
+	padding-top: 13px;
+	height: 70px;
 	cursor: pointer;
 }
 
@@ -463,8 +463,8 @@ hr {
 
 	.hamburger {
 		position: absolute;
-		top: 17px;
-		right: 10%;
+		top: 35px;
+		right: 11%;
 		display: block;
 		cursor: pointer;
 		z-index: 5;
