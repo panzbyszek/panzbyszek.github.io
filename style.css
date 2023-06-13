@@ -406,16 +406,18 @@ hr {
 	.nav-show {
 		opacity: 1;
 	}
-
-	.nav-bar {
+	
+	/* szary prostokat, na którym jest menu hamburgera */
+	.nav-bar { 
 		position: fixed;
 		top: 0px;
 		right: 0;
-		width: 60%;
+		width: 55%; /*szerokość szarego na którym jest menu hamburgera */
 		height: 100vh;
 		display: flex;
 		flex-direction: column;
-		align-items: center;
+		/* align-items: center; to cos nie zadzialalo */
+		text-align: center; 
 		justify-content: space-evenly;
 		background: var(--main-header-background);
 		transform: translatex(100%);
