@@ -248,20 +248,20 @@ h3 {
 	box-shadow: 0 0 1.5rem gray;
 }
 
-/* dodane przez AI */
+/* dodane przez AI 
 @media screen and (max-width: 500px) {
   .card {
     width: 100%;
     margin: 200px;
   }
-}
+}*/
 
-/*@media screen and (max-width: 500px) {
+@media screen and (max-width: 500px) {
   .card-container {
     overflow: scroll;
-    padding: 10px;
+    padding: 200px;
   }
-}*/
+}/**/
 
 /*──────────────────
       Contact
