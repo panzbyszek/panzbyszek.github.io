@@ -61,7 +61,7 @@ header:hover {
 
 a.nav-link {
 	margin: 2px;
-	padding: 5px 10px;
+	padding: 4px 8px; /*ramka dookola elementu glownego*/
 	text-decoration: none;
 	color: var(--main-fonts-color);
 	font-family: var(--main-font-family);
@@ -81,7 +81,7 @@ a.nav-link {
 a.nav-link-child {
 	font-size: 85%;
 	margin: 2px;
-	padding: 4px 8px; /*ramka dookola elementu*/
+	padding: 3px 6px; /*ramka dookola pod-elementu*/
 	text-decoration: none;
 	color: var(--main-fonts-color);
 	font-family: var(--main-font-family);
