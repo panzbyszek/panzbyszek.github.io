@@ -248,6 +248,14 @@ h3 {
 	box-shadow: 0 0 1.5rem gray;
 }
 
+/* dodane przez AI */
+@media screen and (max-width: 600px) {
+  .card {
+    width: 100%;
+    margin: 10px;
+  }
+}
+
 /*──────────────────
       Contact
 ──────────────────*/
