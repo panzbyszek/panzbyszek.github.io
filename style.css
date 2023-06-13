@@ -252,16 +252,16 @@ h3 {
 @media screen and (max-width: 500px) {
   .card {
     width: 100%;
-    margin: 10px;
+    margin: 200px;
   }
 }
 
-@media screen and (max-width: 500px) {
+/*@media screen and (max-width: 500px) {
   .card-container {
     overflow: scroll;
     padding: 10px;
   }
-}
+}*/
 
 /*──────────────────
       Contact
