@@ -259,7 +259,8 @@ h3 {
 @media screen and (max-width: 500px) {
   .card-container {
     overflow: scroll;
-    padding: 200px;
+    margin-left: 28%;
+    padding-left: 1%;
   }
 }/**/
 
