@@ -124,7 +124,7 @@ a.nav-link-child {
 
 @media only screen and (max-width: 768px) {
 	#home .filter {
-		background-size: 70%;
+		background-size: 100%;
 	}
 }
 
