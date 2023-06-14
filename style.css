@@ -122,6 +122,13 @@ a.nav-link-child {
 	opacity: .20;
 }
 
+@media only screen and (max-width: 768px) {
+	#home .filter {
+		background-size: 70%;
+	}
+}
+
+
 .intro {
 	text-align: center;
 	color: var(--main-fonts-color);
