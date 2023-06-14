@@ -1,9 +1,9 @@
 // header scrolling effect
-$(window).on('scroll', function(){
-	if($(window).scrollTop()){
-      		$('header').addClass('nav-show');	  
-	} 
-	else{
+$(window).on('scroll', function () {
+	if ($(window).scrollTop()) {
+		$('header').addClass('nav-show');
+	}
+	else {
 		$('header').removeClass('nav-show');
 	}
 })
@@ -11,60 +11,26 @@ $(window).on('scroll', function(){
 
 //hamburger
 const navSlide = () => {
-	 const hamburger = document.querySelector(".hamburger");
-	 const navbar = document.querySelector(".nav-bar");
-	 const navLinks = document.querySelectorAll(".nav-bar li");
+	const hamburger = document.querySelector(".hamburger");
+	const navbar = document.querySelector(".nav-bar");
+	const navLinks = document.querySelectorAll(".nav-bar li");
 
-     	 hamburger.onclick = () => {
-		
-	 navbar.classList.toggle("nav-active");
-		 
-      //Animation links
-	 navLinks.forEach((link, index) => {
-		if (link.style.animation) {
-			link.style.animation = "";
-		} 
-		else {
-			link.style.animation = `navLinkFade 0.3s ease forwards ${index / 7+0.6}s`;
-		}
-	 });
-       //hamburger animation
-       hamburger.classList.toggle("toggle");
-    }
+	hamburger.onclick = () => {
+
+		navbar.classList.toggle("nav-active");
+
+		//Animation links
+		navLinks.forEach((link, index) => {
+			if (link.style.animation) {
+				link.style.animation = "";
+			}
+			else {
+				link.style.animation = `navLinkFade 0.3s ease forwards ${index / 7 + 0.6}s`;
+			}
+		});
+		//hamburger animation
+		hamburger.classList.toggle("toggle");
 	}
+}
 
 window.onload = () => navSlide();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*//JS do przewijania projektow
-const container = document.querySelector('.card-container');
-const leftArrow = document.querySelector('.arrow-left');
-const rightArrow = document.querySelector('.arrow-right');
-
-leftArrow.addEventListener('click', () => {
-  container.scrollLeft -= container.offsetWidth;
-});
-
-rightArrow.addEventListener('click', () => {
-  container.scrollLeft += container.offsetWidth;
-});
-*/
