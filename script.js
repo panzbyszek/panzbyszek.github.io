@@ -121,7 +121,7 @@ async function getAccount() {
             const accounts = await web3.eth.getAccounts();
             currentAccount = accounts[0];
             // Aktualizacja statusu portfela
-            document.getElementById("walletStatus").innerText = "Wallet Connected: " + currentAccount;
+            document.getElementById("walletStatus").innerText = "Wallet Connected: x +  " + currentAccount;
         } catch (error) {
             console.error("User denied account access...");
         }
