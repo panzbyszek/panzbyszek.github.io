@@ -57,18 +57,73 @@ window.onload = () => navSlide();
 
 
 
+const connectButton = document.getElementById('connectButton');
+        const disconnectButton = document.getElementById('disconnectButton');
+        const accountDiv = document.getElementById('account');
+        let accounts = [];
+
+        connectButton.addEventListener('click', async () => {
+            if(window.ethereum) {
+                try {
+                    accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+                    if(accounts.length > 0) {
+                        accountDiv.classList.remove('hidden');
+                        accountDiv.textContent = `Connected: ${accounts[0]}`;
+                    }
+                } catch (err) {
+                    console.error(err);
+                }
+            } else {
+                console.log('Metamask not installed');
+            }
+        });
+
+        disconnectButton.addEventListener('click', () => {
+            if(accounts.length > 0) {
+                accounts = [];
+                accountDiv.textContent = 'Wallet disconnected';
+                accountDiv.classList.add('hidden');
+            } else {
+                console.log('Wallet not connected');
+            }
+        });
+	/* Kiedy przycisk "Disconnect wallet" jest naciśnięty, czyszczę tablicę accounts i ukrywam div z adresem, symulując rozłączenie z portfelem. 
+	/* Pamiętaj, że to "rozłączenie" nie jest prawdziwym rozłączeniem w kontekście Metamask, ponieważ nie ma wbudowanej funkcji umożliwiającej programowe rozłączenie portfela. */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*_______________________________________________________________________________*/
 /*                                  CRYPTO ALL                                   */
 /*_______________________________________________________________________________*/
-async function getAccount() {
+/*async function getAccount() {
   if (window.ethereum) {
     window.web3 = new Web3(window.ethereum);
     try {
       // Request account access if needed
       await window.ethereum.enable();
       // Acccounts now exposed
-      web3.eth.sendTransaction({/* ... */});
+      web3.eth.sendTransaction({/* ... ****});  
     } catch (error) {
       // User denied account access...
       console.error("User denied account access")
@@ -78,7 +133,7 @@ async function getAccount() {
   else if (window.web3) {
     window.web3 = new Web3(web3.currentProvider);
     // Acccounts always exposed
-    web3.eth.sendTransaction({/* ... */});
+    web3.eth.sendTransaction({/* ... *****});
   }
   // Non-dapp browsers...
   else {
@@ -100,7 +155,7 @@ async function getAccount() {
     }
   }
 
-
+*/
 
 
 
