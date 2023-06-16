@@ -91,6 +91,8 @@ const connectButton = document.getElementById('connectButton');
     }
 
 */
+
+/*
 function getAccount() {
     // Kod do połączenia z portfelem...
     
@@ -104,9 +106,43 @@ function disconnectWallet() {
     // Aktualizacja statusu portfela
     document.getElementById("walletStatus").innerText = "Wallet Disconnected";
 }
+*/
 
+let web3;
+let currentAccount;
 
+async function getAccount() {
+    if (window.ethereum) {
+        web3 = new Web3(window.ethereum);
+        try {
+            // Wywołanie Metamask do połączenia
+            await window.ethereum.enable();
+            // Pobranie konta
+            const accounts = await web3.eth.getAccounts();
+            currentAccount = accounts[0];
+            // Aktualizacja statusu portfela
+            document.getElementById("walletStatus").innerText = "Wallet Connected: " + currentAccount;
+        } catch (error) {
+            console.error("User denied account access...");
+        }
+    }
+    // Jeśli Metamask nie jest zainstalowany
+    else {
+        console.log('Non-Ethereum browser detected. Consider trying MetaMask!');
+    }
+}
 
+async function disconnectWallet() {
+    if (window.ethereum) {
+        try {
+            // Rozłączenie Metamask (to może nie działać zgodnie z oczekiwaniami, ponieważ Metamask nie oferuje natywnej metody rozłączenia)
+            currentAccount = null;
+            document.getElementById("walletStatus").innerText = "Wallet Disconnected";
+        } catch (error) {
+            console.error("Error disconnecting wallet...");
+        }
+    }
+}
 
 
 
