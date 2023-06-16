@@ -92,13 +92,17 @@ const connectButton = document.getElementById('connectButton');
 
 */
 function getAccount() {
-    // Tutaj kod do połączenia z portfelem Metamask
-    document.getElementById('walletStatus').innerText = "Wallet Connected";
+    // Kod do połączenia z portfelem...
+    
+    // Aktualizacja statusu portfela
+    document.getElementById("walletStatus").innerText = "Wallet Connected";
 }
 
 function disconnectWallet() {
-    // Tutaj kod do rozłączenia z portfelem Metamask
-    document.getElementById('walletStatus').innerText = "Wallet Disconnected";
+    // Kod do odłączenia portfela...
+
+    // Aktualizacja statusu portfela
+    document.getElementById("walletStatus").innerText = "Wallet Disconnected";
 }
 
 
