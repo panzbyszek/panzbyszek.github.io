@@ -55,42 +55,40 @@ window.onload = () => navSlide();
 
 
 
-
+/*_______________________________________________________________________________*/
+/*                                  CRYPTO ALL                                   */
+/*_______________________________________________________________________________*/
 
 const connectButton = document.getElementById('connectButton');
-        const disconnectButton = document.getElementById('disconnectButton');
-        const accountDiv = document.getElementById('account');
-        let accounts = [];
+    const disconnectButton = document.getElementById('disconnectButton');
+    const accountDiv = document.getElementById('account');
+    let accounts = [];
 
-        connectButton.addEventListener('click', async () => {
-            if(window.ethereum) {
-                try {
-                    accounts = await ethereum.request({ method: 'eth_requestAccounts' });
-                    if(accounts.length > 0) {
-                        accountDiv.classList.remove('hidden');
-                        accountDiv.textContent = `Connected: ${accounts[0]}`;
-                    }
-                } catch (err) {
-                    console.error(err);
+    async function getAccount() {
+        if(window.ethereum) {
+            try {
+                accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+                if(accounts.length > 0) {
+                    accountDiv.classList.remove('hidden');
+                    accountDiv.textContent = `Connected: ${accounts[0]}`;
                 }
-            } else {
-                console.log('Metamask not installed');
+            } catch (err) {
+                console.error(err);
             }
-        });
+        } else {
+            console.log('Metamask not installed');
+        }
+    }
 
-        disconnectButton.addEventListener('click', () => {
-            if(accounts.length > 0) {
-                accounts = [];
-                accountDiv.textContent = 'Wallet disconnected';
-                accountDiv.classList.add('hidden');
-            } else {
-                console.log('Wallet not connected');
-            }
-        });
-	/* Kiedy przycisk "Disconnect wallet" jest naciśnięty, czyszczę tablicę accounts i ukrywam div z adresem, symulując rozłączenie z portfelem. 
-	/* Pamiętaj, że to "rozłączenie" nie jest prawdziwym rozłączeniem w kontekście Metamask, ponieważ nie ma wbudowanej funkcji umożliwiającej programowe rozłączenie portfela. */
-
-
+    function disconnectWallet() {
+        if(accounts.length > 0) {
+            accounts = [];
+            accountDiv.textContent = 'Wallet disconnected';
+            accountDiv.classList.add('hidden');
+        } else {
+            console.log('Wallet not connected');
+        }
+    }
 
 
 
