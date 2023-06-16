@@ -58,7 +58,7 @@ window.onload = () => navSlide();
 /*_______________________________________________________________________________*/
 /*                                  CRYPTO ALL                                   */
 /*_______________________________________________________________________________*/
-
+/*
 const connectButton = document.getElementById('connectButton');
     const disconnectButton = document.getElementById('disconnectButton');
     const accountDiv = document.getElementById('account');
@@ -90,7 +90,16 @@ const connectButton = document.getElementById('connectButton');
         }
     }
 
+*/
+function getAccount() {
+    // Tutaj kod do połączenia z portfelem Metamask
+    document.getElementById('walletStatus').innerText = "Wallet Connected";
+}
 
+function disconnectWallet() {
+    // Tutaj kod do rozłączenia z portfelem Metamask
+    document.getElementById('walletStatus').innerText = "Wallet Disconnected";
+}
 
 
 
