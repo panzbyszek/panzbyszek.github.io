@@ -79,7 +79,7 @@ async function getAccount() {
     }
     // Jeśli Metamask nie jest zainstalowany
     else {
-        console.log('Non-Ethereum browser detected.<br/>Consider trying MetaMask!');
+        console.log('Non-Ethereum browser detected.</n>Consider trying MetaMask!');
     }
 }
 
@@ -88,7 +88,7 @@ async function disconnectWallet() {
         try {
             // Rozłączenie Metamask (to może nie działać zgodnie z oczekiwaniami, ponieważ Metamask nie oferuje natywnej metody rozłączenia)
             currentAccount = null;
-            document.getElementById("walletStatus").innerText = "Disconnect your wallet manually from Metamask.<br/>Your wallet is NOT disconnected!";
+            document.getElementById("walletStatus").innerText = "Disconnect your wallet manually via Metamask!</n>(otherwise your wallet will NOT be disconnected)";
         } catch (error) {
             console.error("Error disconnecting wallet...");
         }
@@ -104,56 +104,6 @@ async function disconnectWallet() {
 
 
 
-
-
-
-
-
-
-
-/*_______________________________________________________________________________*/
-/*                                  CRYPTO ALL                                   */
-/*_______________________________________________________________________________*/
-/*async function getAccount() {
-  if (window.ethereum) {
-    window.web3 = new Web3(window.ethereum);
-    try {
-      // Request account access if needed
-      await window.ethereum.enable();
-      // Acccounts now exposed
-      web3.eth.sendTransaction({/* ... ****});  
-    } catch (error) {
-      // User denied account access...
-      console.error("User denied account access")
-    }
-  }
-  // Legacy dapp browsers...
-  else if (window.web3) {
-    window.web3 = new Web3(web3.currentProvider);
-    // Acccounts always exposed
-    web3.eth.sendTransaction({/* ... *****});
-  }
-  // Non-dapp browsers...
-  else {
-    console.log('Non-Ethereum browser detected. You should consider trying MetaMask!');
-  }
-}
-
-
-  function disconnectWallet() {
-    if (window.ethereum) {
-      window.web3 = null;
-      if (window.ethereum.isConnected()) {
-        alert("Portfel został rozłączony.");
-      } else {
-        alert("Portfel nie był połączony.");
-      }
-    } else {
-      alert("Metamask nie jest zainstalowany w tej przeglądarce.");
-    }
-  }
-
-*/
 
 
 
