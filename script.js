@@ -87,7 +87,18 @@ async function getAccount() {
 }
 
 
-
+  function disconnectWallet() {
+    if (window.ethereum) {
+      window.web3 = null;
+      if (window.ethereum.isConnected()) {
+        alert("Portfel został rozłączony.");
+      } else {
+        alert("Portfel nie był połączony.");
+      }
+    } else {
+      alert("Metamask nie jest zainstalowany w tej przeglądarce.");
+    }
+  }
 
 
 
