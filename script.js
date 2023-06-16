@@ -88,7 +88,7 @@ async function disconnectWallet() {
         try {
             // Rozłączenie Metamask (to może nie działać zgodnie z oczekiwaniami, ponieważ Metamask nie oferuje natywnej metody rozłączenia)
             currentAccount = null;
-            document.getElementById("walletStatus").innerText = "Disconnect your wallet manually via Metamask!</n>(otherwise your wallet will NOT be disconnected)";
+            document.getElementById("walletStatus").innerHTML = "Disconnect your wallet manually via Metamask!<br/>(otherwise your wallet will NOT be disconnected)";
         } catch (error) {
             console.error("Error disconnecting wallet...");
         }
