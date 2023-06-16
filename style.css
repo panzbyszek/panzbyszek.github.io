@@ -550,7 +550,7 @@ hr {
 
 #crypto #walletStatus {
     font-family: var(--main-font-family);
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     padding: 10px;
     color: var(--main-fonts-color);
     text-align: center;
