@@ -154,19 +154,20 @@
 			</div>
 
 <!--──────────────Crypto──────────────────────────────────────────────────────────────────────────────────────────────────-->
-			<div id="crypto">
-				<h3>Crypto
-					<hr>
-				</h3>
-				<p>Connect your Metamask wallet to mint your WM Token</p>
-				<div class="crypto_buttons">
-					<button onclick="getAccount()">Connect wallet</button>
-					<button onclick="disconnectWallet()">Disconnect wallet</button>
-					<div id="account" class="hidden"></div>
-					<!-- <button onclick="">Mint WM Token</button> -->
-				</div>
-			</div>
-										    
+
+<div id="crypto">
+    <h3>Crypto
+        <hr>
+    </h3>
+    <p>Connect your Metamask wallet to mint your WM Token</p>
+    <div class="crypto_buttons">
+        <button id="connectButton" onclick="getAccount()">Connect wallet</button>
+        <button id="disconnectButton" onclick="disconnectWallet()">Disconnect wallet</button>
+        <div id="account" class="hidden"></div>
+    </div>
+</div>
+							       
+							       
 <!--──────────────Contact──────────────────────────────────────────────────────────────────────────────────────────────────-->
 			<div id="contact">
 				<!--────social media links─────-->
