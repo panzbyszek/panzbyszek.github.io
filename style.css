@@ -486,7 +486,86 @@ hr {
 	transform: translatex(0%);
 }
 
-/*────────────────── 
+
+
+/*──────────────────
+       crypto
+──────────────────*/
+#crypto {
+	margin-top: 100px;
+	padding: 20% 20%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: var(--main-fonts-color);
+}
+
+#crypto h3 {
+	padding-top: 70px;
+}
+
+#crypto p {
+	font-family: var(--main-font-family);
+	font-size: 1.2rem;
+	padding: 10px;
+}
+
+.crypto_buttons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+}
+
+.crypto_buttons button {
+	display: flex;
+	flex-direction: column;
+	margin: 20px;
+	padding: 10px 20px;
+	background: var(--main-decor-color);
+	color: var(--main-fonts-color);
+	font-family: var(--main-font-family);
+	cursor: pointer;
+	border: none;
+	border-radius: 12px;
+	text-align: center;
+	transition: 0.3s;
+}
+
+.crypto_buttons button:hover {
+	box-shadow: 0 0 1.5rem gray;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*──────────────────────────────────── ──────────────────────────────────── ──────────────────────────────────── ──────────────────────────────────── 
  CSS dla listy rozwijanej 
 ──────────────────*/
 /*
