@@ -58,55 +58,6 @@ window.onload = () => navSlide();
 /*_______________________________________________________________________________*/
 /*                                  CRYPTO ALL                                   */
 /*_______________________________________________________________________________*/
-/*
-const connectButton = document.getElementById('connectButton');
-    const disconnectButton = document.getElementById('disconnectButton');
-    const accountDiv = document.getElementById('account');
-    let accounts = [];
-
-    async function getAccount() {
-        if(window.ethereum) {
-            try {
-                accounts = await ethereum.request({ method: 'eth_requestAccounts' });
-                if(accounts.length > 0) {
-                    accountDiv.classList.remove('hidden');
-                    accountDiv.textContent = `Connected: ${accounts[0]}`;
-                }
-            } catch (err) {
-                console.error(err);
-            }
-        } else {
-            console.log('Metamask not installed');
-        }
-    }
-
-    function disconnectWallet() {
-        if(accounts.length > 0) {
-            accounts = [];
-            accountDiv.textContent = 'Wallet disconnected';
-            accountDiv.classList.add('hidden');
-        } else {
-            console.log('Wallet not connected');
-        }
-    }
-
-*/
-
-/*
-function getAccount() {
-    // Kod do połączenia z portfelem...
-    
-    // Aktualizacja statusu portfela
-    document.getElementById("walletStatus").innerText = "Wallet Connected";
-}
-
-function disconnectWallet() {
-    // Kod do odłączenia portfela...
-
-    // Aktualizacja statusu portfela
-    document.getElementById("walletStatus").innerText = "Wallet Disconnected";
-}
-*/
 
 let web3;
 let currentAccount;
@@ -121,14 +72,14 @@ async function getAccount() {
             const accounts = await web3.eth.getAccounts();
             currentAccount = accounts[0];
             // Aktualizacja statusu portfela
-            document.getElementById("walletStatus").innerText = "Wallet Connected: x +  " + currentAccount;
+            document.getElementById("walletStatus").innerText = "Address: " + currentAccount;
         } catch (error) {
             console.error("User denied account access...");
         }
     }
     // Jeśli Metamask nie jest zainstalowany
     else {
-        console.log('Non-Ethereum browser detected. Consider trying MetaMask!');
+        console.log('Non-Ethereum browser detected.<br/>Consider trying MetaMask!');
     }
 }
 
@@ -137,7 +88,7 @@ async function disconnectWallet() {
         try {
             // Rozłączenie Metamask (to może nie działać zgodnie z oczekiwaniami, ponieważ Metamask nie oferuje natywnej metody rozłączenia)
             currentAccount = null;
-            document.getElementById("walletStatus").innerText = "Wallet Disconnected";
+            document.getElementById("walletStatus").innerText = "Disconnect your wallet manually from Metamask.<br/>Your wallet is NOT disconnected!";
         } catch (error) {
             console.error("Error disconnecting wallet...");
         }
