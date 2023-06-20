@@ -695,8 +695,8 @@ hr {
 	width: 40px; /* adjust size as per need */
 	height: 40px;
 	margin: 0 auto; /* centering the icon */
-	background: url('https://www.google.pl/url?sa=i&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3APDF_file_icon.svg&psig=AOvVaw0Fj5KFUJW_lI9x3Tmg9zr3&ust=1687344819560000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCNjc_LbX0f8CFQAAAAAdAAAAABAE') no-repeat; /* replace 'your-pdf-icon.png' with your PDF icon URL */
-	background-size: contain; /* this will make sure that the icon fits within the dimensions specified */
+/*	background: url('https://www.google.pl/url?sa=i&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3APDF_file_icon.svg&psig=AOvVaw0Fj5KFUJW_lI9x3Tmg9zr3&ust=1687344819560000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCNjc_LbX0f8CFQAAAAAdAAAAABAE') no-repeat; /* replace 'your-pdf-icon.png' with your PDF icon URL */
+/*	background-size: contain; /* this will make sure that the icon fits within the dimensions specified */
 	cursor: pointer; /* changes the cursor to pointer/hand when hovered over the icon */
 }
 
