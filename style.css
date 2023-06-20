@@ -626,3 +626,81 @@ hr {
 	scroll-snap-type: x mandatory;
 	-webkit-overflow-scrolling: touch;
 }
+
+
+/*────────────────── 
+      myCV
+──────────────────*/
+#myCV {
+	margin-top: 100px;
+	padding: 20% 20%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: var(--main-fonts-color);
+}
+
+#myCV h3 {
+	padding-top: 70px;
+}
+
+#myCV p {
+	font-family: var(--main-font-family);
+	font-size: 1.2rem;
+	padding: 10px;
+}
+
+.cv-content {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+}
+
+.cv-content a {
+	margin: 20px;
+	padding: 10px 20px;
+	background: var(--main-decor-color);
+	color: var(--main-fonts-color);
+	font-family: var(--main-font-family);
+	cursor: pointer;
+	text-decoration: none;
+	border-radius: 12px;
+	text-align: center;
+	transition: 0.3s;
+}
+
+.cv-content a:hover {
+	box-shadow: 0 0 1.5rem gray;
+	color: #202020;
+}
+
+@media screen and (max-width: 500px) {
+  .cv-content a {
+    font-size: 0.8rem;
+    padding: 8px 16px;
+  }
+}
+
+
+/*────────────────── 
+  CSS for PDF Icon
+──────────────────*/
+
+.pdf-icon {
+	width: 40px; /* adjust size as per need */
+	height: 40px;
+	margin: 0 auto; /* centering the icon */
+	background: url('https://www.google.pl/url?sa=i&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3APDF_file_icon.svg&psig=AOvVaw0Fj5KFUJW_lI9x3Tmg9zr3&ust=1687344819560000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCNjc_LbX0f8CFQAAAAAdAAAAABAE') no-repeat; /* replace 'your-pdf-icon.png' with your PDF icon URL */
+	background-size: contain; /* this will make sure that the icon fits within the dimensions specified */
+	cursor: pointer; /* changes the cursor to pointer/hand when hovered over the icon */
+}
+
+/* optional: to change the look of the icon when hovered over */
+.pdf-icon:hover {
+	opacity: 0.7; /* makes the icon slightly transparent */
+}
