@@ -693,7 +693,7 @@ hr {
 
 .pdf-icon {
 	width: 40px; /* adjust size as per need */
-	height: 40px;
+	height: auto;
 	margin: 0 auto; /* centering the icon */
 	background: url('graphics/PDF_file_icon.png') no-repeat;
 	background-size: contain; /* this will make sure that the icon fits within the dimensions specified */
@@ -704,6 +704,10 @@ hr {
 .pdf-icon:hover {
 	opacity: 0.7; /* makes the icon slightly transparent */
 }
+
+/*────────────────── 
+  Modal
+──────────────────*/
 
 /* The Modal (background) */
 .modal {
