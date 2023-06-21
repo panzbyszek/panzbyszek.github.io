@@ -157,7 +157,7 @@ h3 {
       projects
 ──────────────────*/
 #projects {
-	margin-top: 100px;
+	/*margin-top: 100px;*/
 	padding: 20% 20%;
 	height: 100%;
 	display: flex;
@@ -557,59 +557,6 @@ hr {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*──────────────────────────────────── ──────────────────────────────────── ──────────────────────────────────── ──────────────────────────────────── 
- CSS dla listy rozwijanej 
-──────────────────*/
-/*
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown:hover .dropdown
-*/
-
-
-/*────────────────── 
- CSS dla przewijania projektow
-──────────────────*/
-
 .container {
 	display: flex;
 	overflow: hidden;
@@ -628,11 +575,11 @@ hr {
 }
 
 
-/*────────────────── 
-      myCV
-──────────────────*/
-#myCV {
-	margin-top: 100px;
+/*────────────────────────────────────────────────────── 
+      about, myCV, architect, chatgpt, midjourney
+──────────────────────────────────────────────────────*/
+#about, #myCV, #architect, #chatgpt, #midjourney {
+	margin-top: 400px;
 	padding: 20% 20%;
 	height: 100%;
 	display: flex;
@@ -643,17 +590,17 @@ hr {
 	color: var(--main-fonts-color);
 }
 
-#myCV h3 {
+#about, #myCV, #architect, #chatgpt, #midjourney h3 {
 	padding-top: 70px;
 }
 
-#myCV p {
+#about, #myCV, #architect, #chatgpt, #midjourney p {
 	font-family: var(--main-font-family);
 	font-size: 1.2rem;
-	padding: 10px;
+	padding: 300px;
 }
 
-.cv-content {
+#about .cv-content, #myCV .cv-content, #architect .cv-content, #chatgpt .cv-content, #midjourney .cv-content {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -661,7 +608,7 @@ hr {
 	padding: 20px;
 }
 
-.cv-content a {
+#about .cv-content a, #myCV .cv-content a, #architect .cv-content a, #chatgpt .cv-content a, #midjourney .cv-content a {
 	margin: 20px;
 	padding: 10px 20px;
 	background: var(--main-decor-color);
@@ -674,13 +621,13 @@ hr {
 	transition: 0.3s;
 }
 
-.cv-content a:hover {
+#about .cv-content a:hover, #myCV .cv-content a:hover, #architect .cv-content a:hover, #chatgpt .cv-content a:hover, #midjourney .cv-content a:hover {
 	box-shadow: 0 0 1.5rem gray;
 	color: #202020;
 }
 
 @media screen and (max-width: 500px) {
-  .cv-content a {
+	#about .cv-content a, #myCV .cv-content a, #architect .cv-content a, #chatgpt .cv-content a, #midjourney .cv-content a {
     font-size: 0.8rem;
     padding: 8px 16px;
   }
@@ -703,47 +650,4 @@ hr {
 /* optional: to change the look of the icon when hovered over */
 .pdf-icon:hover {
 	opacity: 0.7; /* makes the icon slightly transparent */
-}
-
-/*────────────────── 
-  Modal
-──────────────────*/
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content */
-.modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-}
-
-/* The Close Button */
-.close-button {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close-button:hover,
-.close-button:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
 }
