@@ -119,44 +119,22 @@ window.onclick = function(event) {				// When the user clicks anywhere outside o
   }
 }
 
-
-
-
-
-
-
-
-
-
-
 /*_______________________________________________________________________________*/
-/*                                   NOT USED                                    */
+/*                      Przewijanie niżej niż prowadzi kotwica                   */
 /*_______________________________________________________________________________*/
-/*
-//hamburger
-const navSlide = () => {
-	const hamburger = document.querySelector(".hamburger");
-	const navbar = document.querySelector(".nav-bar");
-	const navLinks = document.querySelectorAll(".nav-bar li");
 
-	hamburger.onclick = () => {
 
-		navbar.classList.toggle("nav-active");
+/*if(window.innerWidth <= 500) {*/
+    document.querySelectorAll('a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
 
-		//Animation links
-		navLinks.forEach((link, index) => {
-			if (link.style.animation) {
-				link.style.animation = "";
-			}
-			else {
-				link.style.animation = `navLinkFade 0.3s ease forwards ${index / 7 + 0.6}s`;
-			}
-		});
-		//hamburger animation
-		hamburger.classList.toggle("toggle");
-	}
-}
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
 
-window.onload = () => navSlide();
-
-*/
+            window.scrollBy(0, 0); // Odejmij wartość, na przykład 50 pikseli
+        });
+    });
+/*}*/
