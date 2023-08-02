@@ -114,6 +114,14 @@ a.nav-link-child {
 	justify-content: space-evenly;
 }
 
+@media only screen and (max-width: 768px) {
+	#home .filter {
+		background-image: url('graphics/mobile_bck_3.JPG');
+		background-size: cover;
+		background-position: center;
+		/*background-size: 260%;*/
+	}
+}
 
 #home .filter {
 	background: url('graphics/Laptop4.png') no-repeat;
@@ -126,21 +134,6 @@ a.nav-link-child {
 	right: 0;
 	opacity: .20;
 }
-
-@media only screen and (max-width: 768px) {
-	#home .filter {
-		background-image: url('graphics/mobile_bck_3.jpg');
-		background-size: cover;
-		background-position: center;
-	}
-}
-
-/*@media only screen and (max-width: 768px) {
-	#home .filter {
-		background-size: 260%;
-	}
-}*/
-
 
 .intro {
 	text-align: center;
